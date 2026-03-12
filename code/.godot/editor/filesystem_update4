@@ -1,0 +1,3 @@
+res://scenes/main.tscn
+res://scripts/battle_scene.gd
+res://scripts/core/BattleState.gd

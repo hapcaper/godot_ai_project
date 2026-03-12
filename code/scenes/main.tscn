@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://den0l5hb6ieoi"]
+
+[ext_resource type="Script" uid="uid://c186ofac7mp1l" path="res://scripts/battle_scene.gd" id="1_8f9bq"]
+
+[node name="Main" type="Node2D" unique_id=1241138620]
+script = ExtResource("1_8f9bq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=551920421]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=925809519]
+
+[node name="StatusLabel" type="Label" parent="UI" unique_id=239401427]
+mouse_filter = 2
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 980.0
+offset_bottom = 40.0
+text = "状态"
+
+[node name="HintLabel" type="Label" parent="UI" unique_id=1370844418]
+mouse_filter = 2
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 1180.0
+offset_bottom = 120.0
+text = "说明"
+
+[node name="PreviewLabel" type="Label" parent="UI" unique_id=1909956049]
+mouse_filter = 2
+offset_left = 6.0
+offset_top = 87.0
+offset_right = 1174.0
+offset_bottom = 145.0
+text = "战斗预览"
+
+[node name="MoveCostCheck" type="CheckButton" parent="UI" unique_id=119004880]
+offset_left = 1716.0
+offset_top = 56.0
+offset_right = 1896.0
+offset_bottom = 87.0
+button_pressed = true
+text = "显示移动消耗"
+
+[node name="GridSizeInput" type="LineEdit" parent="UI" unique_id=174238322]
+offset_left = 1539.0
+offset_top = 99.0
+offset_right = 1712.0
+offset_bottom = 130.0
+text = "8*6"
+placeholder_text = "n*m 例如 12*8"
+
+[node name="ApplyGridButton" type="Button" parent="UI" unique_id=1486494112]
+offset_left = 1718.0
+offset_top = 99.0
+offset_right = 1898.0
+offset_bottom = 130.0
+text = "应用地块数量"
+
+[node name="HeatmapOption" type="OptionButton" parent="UI" unique_id=1402752671]
+offset_left = 1541.0
+offset_top = 57.0
+offset_right = 1709.0
+offset_bottom = 85.0
+
+[node name="ZoomLockCheck" type="CheckButton" parent="UI" unique_id=1920847362]
+offset_left = 1715.0
+offset_top = 132.0
+offset_right = 1829.0
+offset_bottom = 163.0
+text = "锁定缩放"
+
+[node name="ZoomInput" type="LineEdit" parent="UI" unique_id=1847293841]
+offset_left = 1835.0
+offset_top = 132.0
+offset_right = 1903.5
+offset_bottom = 163.0
+text = "1.00"
+placeholder_text = "缩放"
+
+[node name="InspectPanel" type="PanelContainer" parent="UI" unique_id=1460019988]
+offset_left = 1415.0
+offset_top = 132.0
+offset_right = 1906.0
+offset_bottom = 471.0
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="UI/InspectPanel" unique_id=1538617283]
+layout_mode = 2
+
+[node name="InspectTitle" type="Label" parent="UI/InspectPanel/VBox" unique_id=1681830062]
+layout_mode = 2
+text = "右键信息"
+
+[node name="InspectDetail" type="Label" parent="UI/InspectPanel/VBox" unique_id=867447754]
+custom_minimum_size = Vector2(0, 86)
+layout_mode = 2
+text = "右键单位或地块查看详情"
+autowrap_mode = 2
+
+[node name="CompareButtons" type="HBoxContainer" parent="UI/InspectPanel/VBox" unique_id=1070174726]
+layout_mode = 2
+
+[node name="SetBaselineButton" type="Button" parent="UI/InspectPanel/VBox/CompareButtons" unique_id=1760101528]
+layout_mode = 2
+text = "设为对比基准"
+
+[node name="ClearBaselineButton" type="Button" parent="UI/InspectPanel/VBox/CompareButtons" unique_id=998239626]
+layout_mode = 2
+text = "清除基准"
+
+[node name="InspectHistoryTitle" type="Label" parent="UI/InspectPanel/VBox" unique_id=406698664]
+layout_mode = 2
+text = "查看历史"
+
+[node name="InspectHistory" type="RichTextLabel" parent="UI/InspectPanel/VBox" unique_id=1043092263]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+scroll_following = true
+
+[node name="ActionPanel" type="PanelContainer" parent="UI" unique_id=1486304025]
+offset_left = 1250.0
+offset_top = 12.0
+offset_right = 1886.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="HBox" type="HBoxContainer" parent="UI/ActionPanel" unique_id=2089262109]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MoveButton" type="Button" parent="UI/ActionPanel/HBox" unique_id=217816233]
+layout_mode = 2
+text = "Move"
+
+[node name="AttackButton" type="Button" parent="UI/ActionPanel/HBox" unique_id=1783811759]
+layout_mode = 2
+text = "Attack"
+
+[node name="WaitButton" type="Button" parent="UI/ActionPanel/HBox" unique_id=1922220648]
+layout_mode = 2
+text = "Wait"
+
+[node name="EndTurnButton" type="Button" parent="UI/ActionPanel/HBox" unique_id=1514033391]
+layout_mode = 2
+text = "EndTurn"
